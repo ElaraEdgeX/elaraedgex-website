@@ -1,210 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ElaraEdgeX – Innovation at the Edge of Xcellence</title>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #008080;
-      --secondary-color: #6ebbdf;
-      --bg-light: #fef9f2;
-      --font-main: 'Poppins', sans-serif;
-      --font-logo: 'Audiowide', sans-serif;
-    }
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElaraEdgeX – Innovation with an Edge of Xcellence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Mollie+Glaston&family=Chakra+Petch:ital,wght@1,700&display=swap" rel="stylesheet">
+  <style>
     body {
       margin: 0;
-      font-family: var(--font-main);
-      background: var(--bg-light);
-      color: #333;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #ffffff;
+      color: #48576e;
     }
 
     header {
-      position: sticky;
-      top: 0;
-      background: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      z-index: 1000;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: var(--primary-color);
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--secondary-color);
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-      color: #ffffff;
-      padding: 100px 40px;
       text-align: center;
-      border-bottom-left-radius: 120px;
-      border-bottom-right-radius: 120px;
-      position: relative;
-      overflow: hidden;
+      padding: 60px 20px 30px;
+      background: none;
+      color: #1a1a1a;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 200px;
-      height: 200px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      margin: 0;
+      color: #1a1a1a;
     }
 
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      font-family: var(--font-logo);
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    .tagline {
+      font-size: 1.3rem;
+      color: #3a3a3a;
+      margin-top: 15px;
+      font-style: italic;
     }
 
-    .hero p {
-      font-size: 1.4rem;
-      margin-bottom: 30px;
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      background: #f8f9fb;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(72, 87, 110, 0.1);
     }
 
     .cta-button {
-      background-color: #ffffff;
-      color: var(--primary-color);
-      border: 2px solid #ffffff;
-      padding: 12px 30px;
-      font-weight: bold;
-      border-radius: 50px;
-      text-decoration: none;
+      display: inline-block;
+      margin-top: 40px;
+      padding: 14px 30px;
+      background-color: #008080e0;
+      color: white;
+      font-weight: 600;
       font-size: 1rem;
-      transition: all 0.3s ease;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .cta-button:hover {
-      background-color: transparent;
-      color: #ffffff;
-    }
-
-    .feature-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px 40px;
-      gap: 40px;
-    }
-
-    .feature-section:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .feature-content {
-      flex: 1;
-    }
-
-    .feature-content h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: var(--primary-color);
-    }
-
-    .feature-content p {
-      font-size: 1.1rem;
-    }
-
-    .feature-image {
-      flex: 1;
-    }
-
-    .feature-image img {
-      width: 100%;
-      border-radius: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background-color: #2f3f55;
+      transform: translateY(-2px);
     }
 
     footer {
       background-color: #e8ecf3;
+      color: #48576e;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
-      margin-top: 50px;
-      border-top-left-radius: 50px;
-      border-top-right-radius: 50px;
-    }
-
-    @media (max-width: 768px) {
-      .feature-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
+      border-top: 1px solid #cdd6e4;
     }
   </style>
 </head>
 
 <body>
-
-<header>
-  <img src="logo2.png" alt="ElaraEdgeX Logo">
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Portfolio</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+  <header style="padding: 40px 20px 30px; background: linear-gradient(to right, #fef9f2, z#6ebbdf); display: flex; align-items: center; justify-content: center; gap: 20px;">
+        <img src="Logo5.png" alt="ElaraEdgeX Logo" style="height: 180px; width: auto;" />
+        <div style="text-align: left;">
+           <h1 style="font-family: 'GB Garamond ', serif; font-size: 3.2rem; color: #53575e; margin: 0;">ElaraEdgeX</h1>          
+           <p id="tagline-text" style="font-family: 'Audiowide', sans-serif; font-size: 1.6rem; color: #008080e0; margin-top: 10px;">
+            Innovation with an Edge of Xcellence
+          </p>
 </header>
+<nav style="background-color: #ffffff; padding: 10px 20px; text-align: center; font-family: 'Chakra Petch', sans-serif;">
+  <a href="services.html" style="margin: 0 15px; color: #008080e0; text-decoration: none; font-weight: bold;">Services</a>
+  <a href="about.html" style="margin: 0 15px; color: #008080e0; text-decoration: none; font-weight: bold;">About Us</a>
+  <a href="portfolio.html" style="margin: 0 15px; color: #008080e0; text-decoration: none; font-weight: bold;">Portfolio</a>
+  <a href="contact.html" style="margin: 0 15px; color: #008080e0; text-decoration: none; font-weight: bold;">Contact</a>
+  <a href="blog.html" style="margin: 0 15px; color: #008080e0; text-decoration: none; font-weight: bold;">Blog</a>
+</nav>
+  <main>
+    <div style="background-color: #fff8e6; color: #6b4f1d; border-left: 6px solid #ffcc00; padding: 20px; border-radius: 8px; font-weight: 600; font-family: 'Chakra Petch', sans-serif; margin-bottom: 30px; text-align: center;">
+      🚧 This website is currently under construction. We're working hard to build something amazing – stay tuned! 
+    </div>
+    <p>
+      ElaraEdgeX is a forward-thinking digital technology partner dedicated to delivering real-world impact. We help organisations simplify complexity, accelerate transformation, and align their technology with strategic outcomes.
+    </p>
 
-<section class="hero">
-  <h1>ElaraEdgeX</h1>
-  <p>Innovation at the Edge of Xcellence</p>
-  <a href="mailto:info@elaraedgex.co.uk" class="cta-button">Let’s Talk</a>
+    <p>
+      Our approach blends expertise in digital delivery, quality engineering, automation, and DevOps alignment. We work alongside businesses to unlock opportunities, reduce friction, and enable sustainable growth with scalable and efficient solutions.
+    </p>
+
+    <p>
+      Whether you're building from the ground up, modernising legacy systems, or looking to scale with confidence — ElaraEdgeX brings clarity, creativity, and a commitment to excellence at every step.
+    </p>
+
+    <a class="cta-button" href="mailto:info@elaraedgex.co.uk">Let’s Talk</a>
+  </main>
+  
+  <footer>
+    &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
+  </footer>
+  <!-- Placeholder pages -->
+<section style="max-width: 900px; margin: 40px auto; padding: 20px; text-align: center; font-family: 'Chakra Petch', sans-serif;">
+  <h2 style="color: #48576e;">Coming Soon</h2>
+  <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
+    <li style="margin: 10px 0;">💼 Services Page</li>
+    <li style="margin: 10px 0;">🧠 About Us Page</li>
+    <li style="margin: 10px 0;">🛠️ Portfolio or Case Studies</li>
+    <li style="margin: 10px 0;">📬 Contact Page</li>
+    <li style="margin: 10px 0;">📰 Blog or Insights</li>
+  </ul>
 </section>
-
-<section class="feature-section">
-  <div class="feature-content">
-    <h2>Cutting-Edge Solutions</h2>
-    <p>We deliver future-ready technology designed to keep your business ahead of the curve.</p>
-  </div>
-  <div class="feature-image">
-    <img src="feature1.jpg" alt="Tech Solutions">
-  </div>
-</section>
-
-<section class="feature-section">
-  <div class="feature-content">
-    <h2>Innovative Thinking</h2>
-    <p>Our creative approach ensures unique and tailored solutions for your business challenges.</p>
-  </div>
-  <div class="feature-image">
-    <img src="feature2.jpg" alt="Innovative Thinking">
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
-</footer>
-
 </body>
+
 </html>
