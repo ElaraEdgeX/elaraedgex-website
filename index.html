@@ -7,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #008080;
-      --secondary-color: #6ebbdf;
-      --bg-light: #fef9f2;
+      --primary-color: #0F4C44; /* Deep Teal Green */
+      --secondary-color: #C88B2B; /* Warm Mustard Gold */
+      --bg-light: #F5E8D1; /* Light Cream/Beige */
       --font-main: 'Poppins', sans-serif;
       --font-logo: 'Audiowide', sans-serif;
     }
@@ -18,24 +18,24 @@
       margin: 0;
       font-family: var(--font-main);
       background: var(--bg-light);
-      color: #333;
+      color: var(--primary-color);
     }
 
     header {
       position: sticky;
-  top: 0;
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 50px; /* slightly more vertical padding */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  z-index: 1000;
-}
+      top: 0;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 1000;
+    }
 
-header img {
-  height: 80px; /* increased height for clearer logo */
-}
+    header img {
+      height: 80px;
+    }
 
     nav a {
       margin: 0 15px;
@@ -119,11 +119,12 @@ header img {
     .feature-content h2 {
       font-size: 2rem;
       margin-bottom: 15px;
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     .feature-content p {
       font-size: 1.1rem;
+      color: #333; /* Keep body text readable */
     }
 
     .feature-image {
@@ -137,7 +138,8 @@ header img {
     }
 
     footer {
-      background-color: #e8ecf3;
+      background-color: var(--primary-color);
+      color: #ffffff;
       text-align: center;
       padding: 20px;
       font-size: 0.9rem;
