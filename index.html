@@ -22,20 +22,19 @@
     }
 
     header {
-  position: sticky;
+      position: sticky;
   top: 0;
   background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 40px; /* increased vertical padding */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px 50px; /* slightly more vertical padding */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   z-index: 1000;
 }
 
 header img {
-  height: 80px; /* Larger for clearer logo */
-  width: auto; /* maintains aspect ratio */
+  height: 80px; /* increased height for clearer logo */
 }
 
     nav a {
@@ -51,13 +50,15 @@ header img {
     }
 
     .hero {
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-  color: #ffffff;
-  padding: 100px 40px;
-  text-align: center;
-  border-bottom-left-radius: 120px;
-  border-bottom-right-radius: 120px;
-}
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: #ffffff;
+      padding: 100px 40px;
+      text-align: center;
+      border-bottom-left-radius: 120px;
+      border-bottom-right-radius: 120px;
+      position: relative;
+      overflow: hidden;
+    }
 
     .hero::before {
       content: '';
@@ -83,21 +84,21 @@ header img {
     }
 
     .cta-button {
-  background-color: #ffffff;
-  color: var(--primary-color);
-  border: 2px solid #ffffff;
-  padding: 12px 30px;
-  font-weight: bold;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
+      background-color: #ffffff;
+      color: var(--primary-color);
+      border: 2px solid #ffffff;
+      padding: 12px 30px;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
 
-.cta-button:hover {
-  background-color: transparent;
-  color: #ffffff;
-}
+    .cta-button:hover {
+      background-color: transparent;
+      color: #ffffff;
+    }
 
     .feature-section {
       display: flex;
@@ -165,7 +166,7 @@ header img {
 <body>
 
 <header>
-  <img src="logo15.png" alt="ElaraEdgeX Logo">
+  <img src="logo13.png" alt="ElaraEdgeX Logo">
   <nav>
     <a href="#">Home</a>
     <a href="#">Services</a>
