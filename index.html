@@ -5,191 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ElaraEdgeX – Innovation at the Edge of Xcellence</title>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #0F4C44; /* Deep Teal Green */
-      --secondary-color: #C88B2B; /* Warm Mustard Gold */
-      --bg-light: #F5E8D1; /* Light Cream/Beige */
-      --font-main: 'Poppins', sans-serif;
-      --font-logo: 'Audiowide', sans-serif;
-    }
-
-    body {
-      margin: 0;
-      font-family: var(--font-main);
-      background: var(--bg-light);
-      color: var(--primary-color);
-    }
-
-    header {
-  position: sticky;
-  top: 0;
-  background: var(--bg-light); /* changed from #ffffff to match logo background */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 50px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  z-index: 1000;
-}
-    header img {
-      height: 80px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: var(--primary-color);
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--secondary-color);
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-      color: #ffffff;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom-left-radius: 60px;
-      border-bottom-right-radius: 60px;
-      position: relative;
-      overflow: hidden;
-    }
-    
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 200px;
-      height: 200px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      font-family: var(--font-logo);
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .hero p {
-      font-size: 1.4rem;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      background-color: #ffffff;
-      color: var(--primary-color);
-      border: 2px solid #ffffff;
-      padding: 12px 30px;
-      font-weight: bold;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: transparent;
-      color: #ffffff;
-    }
-
-    .feature-section {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 80px 40px;
-      gap: 40px;
-    }
-
-    .feature-section:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-   
-    .feature-content {
-      flex: 1;
-    }
-
-    .feature-content h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-      color: var(--secondary-color);
-    }
-
-    .feature-content p {
-      font-size: 1.1rem;
-      color: #333; /* Keep body text readable */
-    }
-
-    .feature-image {
-      flex: 1;
-    }
-
-    .feature-image img {
-      width: 100%;
-      border-radius: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background-color: var(--primary-color);
-      color: #ffffff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      margin-top: 50px;
-      border-top-left-radius: 50px;
-      border-top-right-radius: 50px;
-    }
-
-    @media (max-width: 768px) {
-      .feature-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      nav a {
-        margin: 0 8px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
 
 <header>
-  <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
+  <a href="index.html">
+    <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
+  </a>
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
-    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
-<!-- Construction Banner (insert here) -->
-<section style="
-  text-align: center;
-  padding: 20px;
-  background-color: #F5E8D1; /* soft cream background */
-  color: #C88B2B; /* mustard gold text */
-  font-weight: 600;
-  font-size: 1.1rem;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-">
+
+<section style="text-align: center; padding: 20px; background-color: #F5E8D1; color: #C88B2B; font-weight: 600; font-size: 1.1rem; font-family: 'Poppins', sans-serif; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
   🚧 This website is currently under construction. We're working hard to build something amazing – stay tuned!
 </section>
+
 <section class="hero">
   <h1>ElaraEdgeX</h1>
   <p>Innovation at the Edge of Xcellence</p>
@@ -202,7 +41,7 @@
     <p>We deliver future-ready technology designed to keep your business ahead of the curve.</p>
   </div>
   <div class="feature-image">
-    <img src="feature1.jpg" alt="Tech Solutions">
+    <img src="images/feature1.jpg" alt="Tech Solutions">
   </div>
 </section>
 
@@ -212,34 +51,24 @@
     <p>Our creative approach ensures unique and tailored solutions for your business challenges.</p>
   </div>
   <div class="feature-image">
-    <img src="feature2.jpg" alt="Innovative Thinking">
+    <img src="images/feature2.jpg" alt="Innovative Thinking">
   </div>
+</section>
+
+<section style="max-width: 900px; margin: 40px auto; padding: 20px; text-align: center;">
+  <h2 style="color: #48576e;">Coming Soon</h2>
+  <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
+    <li style="margin: 10px 0;"><a href="about.html" style="text-decoration: none; color: inherit;">🧠 About Us</a></li>
+    <li style="margin: 10px 0;"><a href="services.html" style="text-decoration: none; color: inherit;">💼 Services</a></li>
+    <li style="margin: 10px 0;"><a href="portfolio.html" style="text-decoration: none; color: inherit;">🛠️ Portfolio or Case Studies</a></li>
+    <li style="margin: 10px 0;"><a href="blog.html" style="text-decoration: none; color: inherit;">📰 Blog or Insights</a></li>
+    <li style="margin: 10px 0;"><a href="contact.html" style="text-decoration: none; color: inherit;">📬 Contact Us</a></li>
+  </ul>
 </section>
 
 <footer>
   &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
 </footer>
- <!-- Placeholder pages -->
- <!-- Placeholder pages -->
-<section style="max-width: 900px; margin: 40px auto; padding: 20px; text-align: center; font-family: 'Poppins', sans-serif;">
-  <h2 style="color: #48576e;">Coming Soon</h2>
-  <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
-    <li style="margin: 10px 0;">
-      <a href="about.html" style="text-decoration: none; color: inherit;">🧠 About Us </a>
-          </li>
-    <li style="margin: 10px 0;">
-      <a href="services.html" style="text-decoration: none; color: inherit;">💼 Services</a>
-    </li>
-    <li style="margin: 10px 0;">
-      <a href="portfolio.html" style="text-decoration: none; color: inherit;">🛠️ Portfolio or Case Studies</a>
-    </li>
-    <li style="margin: 10px 0;">
-      <a href="blog.html" style="text-decoration: none; color: inherit;">📰 Blog or Insights</a>
-    </li>
-    <li style="margin: 10px 0;">
-            <a href="contact.html" style="text-decoration: none; color: inherit;">📬 Contact Us</a>
-    </li>
-  </ul>
-</section>
+
 </body>
 </html>

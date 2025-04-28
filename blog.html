@@ -3,137 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | ElaraEdgeX</title> <!-- Updated page title -->
+  <title>Blog | ElaraEdgeX</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
-  <style>
-    :root {
-      --primary-color: #0F4C44;
-      --secondary-color: #C88B2B;
-      --bg-light: #F5E8D1;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-light);
-      color: var(--primary-color);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      background: var(--bg-light);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      z-index: 1000;
-    }
-
-    header a img {
-      height: 80px;
-      width: auto;
-      transition: transform 0.3s ease;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--primary-color);
-      font-weight: 600;
-      transition: color 0.3s ease;
-      position: relative;
-      padding: 5px 10px;
-    }
-
-    nav a:hover {
-      color: var(--secondary-color);
-    }
-
-    /* Highlight active page link */
-    nav a.active {
-      color: var(--secondary-color);
-      border-bottom: 2px solid var(--secondary-color);
-    }
-
-    main {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    main h1 {
-      font-size: 3rem;
-      color: var(--secondary-color);
-      margin-bottom: 20px;
-    }
-
-    main p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin-bottom: 30px;
-    }
-
-    .coming-soon {
-      background: #fff7e6;
-      color: var(--secondary-color);
-      font-weight: bold;
-      padding: 15px 25px;
-      border-radius: 30px;
-      margin-top: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      font-size: 1.1rem;
-    }
-
-    .back-home {
-      text-decoration: none;
-      color: var(--primary-color);
-      font-weight: bold;
-      border: 2px solid var(--primary-color);
-      padding: 12px 24px;
-      border-radius: 30px;
-      transition: all 0.3s ease;
-      font-size: 1rem;
-      margin-top: 30px;
-    }
-
-    .back-home:hover {
-      background: var(--primary-color);
-      color: #fff;
-    }
-
-    footer {
-      background-color: var(--primary-color);
-      color: #ffffff;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      border-top-left-radius: 50px;
-      border-top-right-radius: 50px;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-      }
-
-      nav {
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -144,11 +17,11 @@
   </a>
   <nav>
     <a href="index.html">Home</a>
+    <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
-    <a href="about.html">About</a>
+    <a href="blog.html" class="active">Blog</a>
     <a href="contact.html">Contact</a>
-    <a href="blog.html" class="active">Blog</a> <!-- Blog link is active now -->
   </nav>
 </header>
 
@@ -156,9 +29,8 @@
   <div class="coming-soon">
     🚧 This page is under construction. Stay tuned for exciting updates!
   </div>
-  <h1>Our Blog</h1> <!-- Correct heading -->
+  <h1>Our Blog</h1>
   <p>Stay tuned for insights, innovations, and technology updates shared by the ElaraEdgeX team. Exciting content coming soon!</p>
-
   <a href="index.html" class="back-home">← Back to Home</a>
 </main>
 
