@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | ElaraEdgeX</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="favicon.png"> <!-- optional favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     :root {
       --primary-color: #0F4C44;
@@ -13,25 +13,23 @@
       --bg-light: #F5E8D1;
     }
 
-    html, body {
-      height: 100%;
+    body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: var(--bg-light);
       color: var(--primary-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
     }
 
     header {
-      width: 100%;
+      position: sticky;
+      top: 0;
+      background: var(--bg-light);
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 20px 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 1000;
     }
 
     header a img {
@@ -40,21 +38,61 @@
       transition: transform 0.3s ease;
     }
 
-    header a:hover img {
-      transform: scale(1.05);
+    nav {
+      display: flex;
+      gap: 20px;
     }
 
-    h1 {
+    nav a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      transition: color 0.3s ease;
+      position: relative;
+      padding: 5px 10px;
+    }
+
+    nav a:hover {
+      color: var(--secondary-color);
+    }
+
+    /* Highlight active page link */
+    nav a.active {
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--secondary-color);
+    }
+
+    main {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    main h1 {
       font-size: 3rem;
       color: var(--secondary-color);
-      margin-top: 20px;
       margin-bottom: 20px;
     }
 
-    p {
+    main p {
       font-size: 1.2rem;
-      margin-bottom: 40px;
-      max-width: 600px;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .coming-soon {
+      background: #fff7e6;
+      color: var(--secondary-color);
+      font-weight: bold;
+      padding: 15px 25px;
+      border-radius: 30px;
+      margin-top: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      font-size: 1.1rem;
     }
 
     .back-home {
@@ -66,26 +104,67 @@
       border-radius: 30px;
       transition: all 0.3s ease;
       font-size: 1rem;
+      margin-top: 30px;
     }
 
     .back-home:hover {
       background: var(--primary-color);
       color: #fff;
     }
+
+    footer {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
   <a href="index.html">
     <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
   </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html" class="active">About</a> <!-- Highlighted here -->
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<h1>About ElaraEdgeX</h1>
-<p>At ElaraEdgeX, we are driven by innovation, creativity, and a passion for delivering cutting-edge technology solutions that empower businesses to thrive in the digital age.</p>
+<main>
+  <h1>About ElaraEdgeX</h1>
+  <p>At ElaraEdgeX, we are passionate about delivering innovation at the frontier of excellence. We help businesses achieve digital transformation through cutting-edge technology, strategic thinking, and collaborative partnership.</p>
 
-<a href="index.html" class="back-home">← Back to Home</a>
+  <div class="coming-soon">
+    🚧 This page is under construction. Stay tuned for exciting updates!
+  </div>
+
+  <a href="index.html" class="back-home">← Back to Home</a>
+</main>
+
+<footer>
+  &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
+</footer>
 
 </body>
 </html>
