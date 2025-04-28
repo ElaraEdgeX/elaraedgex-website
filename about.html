@@ -2,38 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | ElaraEdgeX</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png"> <!-- optional if you add favicon later -->
   <style>
-    body {
-      background: #F5E8D1;
-      color: #0F4C44;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 100px 20px;
+    :root {
+      --primary-color: #0F4C44; /* Deep Teal */
+      --secondary-color: #C88B2B; /* Warm Mustard */
+      --bg-light: #F5E8D1; /* Light Cream */
     }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
     h1 {
       font-size: 3rem;
-      color: #C88B2B;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
     }
+
     p {
-      margin-top: 20px;
       font-size: 1.2rem;
+      margin-bottom: 40px;
+      max-width: 600px;
     }
+
     a {
-      margin-top: 40px;
-      display: inline-block;
       text-decoration: none;
-      color: #0F4C44;
+      color: var(--primary-color);
       font-weight: bold;
-      border: 2px solid #0F4C44;
-      padding: 10px 20px;
+      border: 2px solid var(--primary-color);
+      padding: 12px 24px;
       border-radius: 30px;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
+      font-size: 1rem;
     }
+
     a:hover {
-      background: #0F4C44;
+      background: var(--primary-color);
       color: #fff;
     }
   </style>
@@ -41,7 +59,7 @@
 <body>
 
 <h1>About ElaraEdgeX</h1>
-<p>Discover who we are and what drives our passion for innovation.</p>
+<p>At ElaraEdgeX, we are driven by innovation, creativity, and a passion for delivering cutting-edge technology solutions that empower businesses to thrive in the digital age.</p>
 <a href="index.html">← Back to Home</a>
 
 </body>
