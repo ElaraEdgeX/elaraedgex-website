@@ -37,6 +37,7 @@
       position: relative;
       transition: all 0.4s ease;
       cursor: pointer;
+      font-family: 'Poppins', sans-serif;
     }
     .concept-tile::after {
       content: '\1F516'; /* bookmark emoji */
@@ -51,8 +52,25 @@
       transform: scale(1.03);
     }
     .concept-tile h3 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .concept-tile h3 .logo-letter {
+      font-family: 'Audiowide', sans-serif;
+      font-size: 2.2rem;
+    }
+    .concept-tile h3 .elara-letter {
+      color: #0F4C44;
+    }
+    .concept-tile h3 .edge-letter {
+      color: #0F4C44;
+    }
+    .concept-tile h3 .x-letter {
+      color: #C88B2B;
     }
     .concept-description {
       opacity: 0;
@@ -106,15 +124,15 @@
 
   <div class="concept-tiles">
     <div class="concept-tile">
-      <h3 style="color: #0F4C44;">🌌 Elara</h3>
+      <h3><span class="logo-letter elara-letter">E</span>lara</h3>
       <p class="concept-description">Named after one of Jupiter’s moons, Elara represents our curiosity and vision for exploring bold digital horizons.</p>
     </div>
     <div class="concept-tile">
-      <h3 style="color: #0F4C44;">🌐 Edge</h3>
+      <h3><span class="logo-letter edge-letter">e</span>dge</h3>
       <p class="concept-description">Symbolises decentralised thinking and agile-edge solutions that empower innovation closer to the source.</p>
     </div>
     <div class="concept-tile">
-      <h3 style="color: #C88B2B;">💡 X</h3>
+      <h3><span class="logo-letter x-letter">X</span></h3>
       <p class="concept-description">Represents our pursuit of Xcellence — the mindset of continual growth, quality, and impact in everything we do.</p>
     </div>
   </div>
