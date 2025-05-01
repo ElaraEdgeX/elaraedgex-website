@@ -58,26 +58,18 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-    form button:hover {
+    form button:hover:enabled {
       background: #C88B2B;
     }
-    .formspree-message {
+    .thank-you-message {
       text-align: center;
-      padding: 60px 20px;
-      background: #fef9f2;
-      margin: 100px auto;
-      max-width: 700px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .formspree-message h1 {
       color: #0F4C44;
-      font-size: 2.5rem;
-    }
-    .formspree-message p {
       font-size: 1.2rem;
-      color: #333;
       margin-top: 20px;
+      display: none;
+      background-color: #e6fff2;
+      padding: 15px;
+      border-radius: 15px;
     }
   </style>
 </head>
@@ -101,9 +93,7 @@
   <main>
     <section class="contact-form">
       <h2>Get in Touch</h2>
-      <form action="https://formspree.io/f/xqaqpkdn" method="POST">
-        <!-- _redirect removed due to free plan limitations -->
-
+      <form id="contactForm">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -116,13 +106,46 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" id="submitBtn">Send Message</button>
       </form>
+      <div class="thank-you-message" id="thankYouMessage">
+        ✅ Thank you for your message! We'll be in touch within 2 working days.
+      </div>
     </section>
   </main>
 
   <footer>
     &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
   </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const thankYou = document.getElementById('thankYouMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch('https://formspree.io/f/xqaqpkdn', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          thankYou.style.display = 'block';
+          submitBtn.disabled = true;
+        } else {
+          thankYou.innerText = '⚠️ Something went wrong. Please try again later.';
+          thankYou.style.display = 'block';
+        }
+      }).catch(() => {
+        thankYou.innerText = '⚠️ Submission failed. Check your connection.';
+        thankYou.style.display = 'block';
+      });
+    });
+  </script>
 </body>
 </html>
