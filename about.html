@@ -10,26 +10,20 @@
   <style>
     .watermark {
       position: fixed;
-      width: 150px;
+      width: 500px;
       height: auto;
-      opacity: 0.03;
+      opacity: 0.035;
       z-index: -1;
       pointer-events: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    .wm-tl { top: 20px; left: 20px; }
-    .wm-tr { top: 20px; right: 20px; }
-    .wm-bl { bottom: 20px; left: 20px; }
-    .wm-br { bottom: 20px; right: 20px; }
-    .wm-center { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 250px; }
   </style>
 </head>
 
 <body>
-  <img src="EEXlogo.png" class="watermark wm-tl" alt="Logo watermark">
-  <img src="EEXlogo.png" class="watermark wm-tr" alt="Logo watermark">
-  <img src="EEXlogo.png" class="watermark wm-bl" alt="Logo watermark">
-  <img src="EEXlogo.png" class="watermark wm-br" alt="Logo watermark">
-  <img src="EEXlogo.png" class="watermark wm-center" alt="Logo watermark">
+  <img src="EEXlogo.png" class="watermark" alt="Logo watermark">
 
 <header>
   <a href="index.html">
@@ -46,9 +40,9 @@
 </header>
 
 <main>
-  <div class="coming-soon">
+  <!-- <div class="coming-soon">
     🚧 This page is under construction. Stay tuned for exciting updates!
-  </div>
+  </div> -->
 
   <h1>About ElaraEdgeX</h1>
 
