@@ -19,6 +19,41 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+    .concept-tiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .concept-tile {
+      flex: 1;
+      min-width: 250px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+    }
+    .concept-tile:hover {
+      background: #F5E8D1;
+      transform: translateY(-5px);
+    }
+    .concept-description {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+    .concept-tile:hover .concept-description {
+      opacity: 1;
+      max-height: 100px;
+    }
   </style>
 </head>
 
@@ -40,10 +75,6 @@
 </header>
 
 <main>
-  <!-- <div class="coming-soon">
-    🚧 This page is under construction. Stay tuned for exciting updates!
-  </div> -->
-
   <h1>About ElaraEdgeX</h1>
 
   <p>ElaraEdgeX is a forward-thinking technology consultancy dedicated to driving digital transformation through innovation, collaboration, and excellence. We specialise in delivering smart, scalable, and human-centred tech solutions that empower businesses to evolve with confidence.</p>
@@ -57,28 +88,26 @@
   <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc;">
 
   <h2 style="color: #C88B2B;">What does “ElaraEdgeX” mean?</h2>
-  <p>The name <strong>ElaraEdgeX</strong> symbolises our commitment to innovation at the frontier of possibility:</p>
+  <p>The name <strong>ElaraEdgeX</strong> reflects our identity and approach:</p>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px; margin-top: 30px;">
-    <div style="flex: 1; min-width: 250px; background: #ffffff; border-radius: 20px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <div class="concept-tiles">
+    <div class="concept-tile">
       <h3 style="color: #0F4C44;">🌕 Elara</h3>
-      <p>Inspired by one of Jupiter’s moons, Elara reflects our curiosity and boldness to explore new digital frontiers.</p>
+      <p class="concept-description">Named after one of Jupiter’s moons, Elara represents our curiosity and vision for exploring bold digital horizons.</p>
     </div>
-
-    <div style="flex: 1; min-width: 250px; background: #ffffff; border-radius: 20px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <div class="concept-tile">
       <h3 style="color: #0F4C44;">🧠 Edge</h3>
-      <p>Symbolises decentralised thinking and agile-edge solutions that empower innovation closer to the source.</p>
+      <p class="concept-description">Symbolises decentralised thinking and agile-edge solutions that empower innovation closer to the source.</p>
     </div>
-
-    <div style="flex: 1; min-width: 250px; background: #ffffff; border-radius: 20px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+    <div class="concept-tile">
       <h3 style="color: #C88B2B;">✨ X</h3>
-      <p>Represents our pursuit of Xcellence — the mindset of continual growth, quality, and impact in everything we do.</p>
+      <p class="concept-description">Represents our pursuit of Xcellence — the mindset of continual growth, quality, and impact in everything we do.</p>
     </div>
   </div>
 
   <p style="margin-top: 40px;">Together, ElaraEdgeX reflects our identity: bold, future-facing, and committed to making innovation work for real-world impact.</p>
 
-  <a href="index.html" class="back-home">← Back to Home</a>
+  <a href="index.html" class="back-home">&larr; Back to Home</a>
 </main>
 
 <footer>
