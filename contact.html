@@ -27,11 +27,6 @@
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
-    .contact-form h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #0F4C44;
-    }
     form label {
       display: block;
       margin-top: 15px;
@@ -67,10 +62,38 @@
       font-size: 1.3rem;
       margin-top: 20px;
       display: none;
-      background-color: #dcf3e6;
-      padding: 30px 20px;
-      border-radius: 15px;
+      background-color: #d6f5e6;
+      padding: 40px 30px;
+      border-radius: 20px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      animation: fadeInScale 0.8s ease forwards;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    .thank-you-message h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .back-home-link {
+      display: inline-block;
+      margin-top: 25px;
+      text-decoration: none;
+      color: #0F4C44;
+      font-weight: bold;
+      border: 2px solid #0F4C44;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+    .back-home-link:hover {
+      background: #0F4C44;
+      color: #fff;
+    }
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
 </head>
@@ -93,9 +116,9 @@
 
   <main>
     <section class="contact-form">
-      <h2>Get in Touch</h2>
       <form id="contactForm">
         <div id="formFields">
+          <h2>Get in Touch</h2>
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required>
 
@@ -112,7 +135,9 @@
         </div>
       </form>
       <div class="thank-you-message" id="thankYouMessage">
-        ✅ Thank you for your message! We'll be in touch within 2 working days.
+        <h2>🎉 Thank you!</h2>
+        <p>We’ve received your message and will be in touch within 2 working days.</p>
+        <a href="index.html" class="back-home-link">← Back to Home</a>
       </div>
     </section>
   </main>
@@ -140,12 +165,12 @@
           formFields.style.display = 'none';
           thankYou.style.display = 'block';
         } else {
-          thankYou.innerText = '⚠️ Something went wrong. Please try again later.';
+          thankYou.innerHTML = '<h2>⚠️ Oops!</h2><p>Something went wrong. Please try again later.</p>';
           formFields.style.display = 'none';
           thankYou.style.display = 'block';
         }
       }).catch(() => {
-        thankYou.innerText = '⚠️ Submission failed. Check your connection.';
+        thankYou.innerHTML = '<h2>⚠️ Error</h2><p>Submission failed. Check your connection.</p>';
         formFields.style.display = 'none';
         thankYou.style.display = 'block';
       });
