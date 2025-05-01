@@ -154,7 +154,7 @@
   }
   
   main {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     min-height: 80vh;
     display: flex;
@@ -165,7 +165,7 @@
     padding: 40px 20px;
   }
   
-  
+    
   main h1 {
     font-size: 3rem;
     color: var(--secondary-color);
