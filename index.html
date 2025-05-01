@@ -7,70 +7,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    .watermark {
+      position: fixed;
+      width: 400px;
+      height: auto;
+      opacity: 0.035;
+      z-index: -1;
+      pointer-events: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
-
 <body>
+  <img src="EEXlogo.png" class="watermark" alt="Logo watermark">
 
-<header>
-  <a href="index.html">
-    <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
-  </a>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <a href="index.html">
+      <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
+    </a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section style="text-align: center; padding: 20px; background-color: #F5E8D1; color: #C88B2B; font-weight: 600; font-size: 1.1rem; font-family: 'Poppins', sans-serif; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-  🚧 This website is currently under construction. We're working hard to build something amazing – stay tuned!
-</section>
+  <section class="hero">
+    <h1>ElaraEdgeX</h1>
+    <p>Innovation at the Edge of Xcellence</p>
+    <a href="mailto:info@elaraedgex.co.uk" class="cta-button">Let’s Talk</a>
+  </section>
 
-<section class="hero">
-  <h1>ElaraEdgeX</h1>
-  <p>Innovation at the Edge of Xcellence</p>
-  <a href="mailto:info@elaraedgex.co.uk" class="cta-button">Let’s Talk</a>
-</section>
+  <section class="intro-summary" style="max-width: 1000px; margin: 60px auto; text-align: center; font-size: 1.2rem; line-height: 1.8;">
+    <p><strong>ElaraEdgeX</strong> is a modern technology consultancy helping businesses build smarter, scale faster, and lead confidently in the digital era. From automation to leadership development, we partner with you to deliver outcomes that matter.</p>
+  </section>
 
-<section class="feature-section">
-  <div class="feature-content">
-    <h2>Cutting-Edge Solutions</h2>
-    <p>We deliver future-ready technology designed to keep your business ahead of the curve.</p>
-  </div>
-  <div class="feature-image">
-    <img src="images/feature1.jpg" alt="Tech Solutions">
-  </div>
-</section>
+  <section class="home-services-preview" style="max-width: 1100px; margin: 40px auto; padding: 20px;">
+    <h2 style="text-align: center; color: #0F4C44;">Our Capabilities</h2>
+    <ul style="display: flex; flex-wrap: wrap; justify-content: space-around; list-style: none; padding: 0; margin-top: 30px; gap: 30px;">
+      <li style="flex: 1; min-width: 220px;"><strong>✅ Software Testing & QA</strong></li>
+      <li style="flex: 1; min-width: 220px;"><strong>⚙️ DevOps & Automation</strong></li>
+      <li style="flex: 1; min-width: 220px;"><strong>🌐 Web Development</strong></li>
+      <li style="flex: 1; min-width: 220px;"><strong>🧠 Coaching & Mentoring</strong></li>
+    </ul>
+  </section>
 
-<section class="feature-section">
-  <div class="feature-content">
-    <h2>Innovative Thinking</h2>
-    <p>Our creative approach ensures unique and tailored solutions for your business challenges.</p>
-  </div>
-  <div class="feature-image">
-    <img src="images/feature2.jpg" alt="Innovative Thinking">
-  </div>
-</section>
-
-<!-- Now footer comes AFTER all sections -->
-<footer>
-  &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
-</footer>
-
-<!-- Now Coming Soon section after footer -->
-<section style="max-width: 900px; margin: 40px auto; padding: 20px; text-align: center;">
-  <h2 style="color: #48576e;">Coming Soon</h2>
-  <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
-    <li style="margin: 10px 0;"><a href="about.html" style="text-decoration: none; color: inherit;">🧠 About Us</a></li>
-    <li style="margin: 10px 0;"><a href="services.html" style="text-decoration: none; color: inherit;">💼 Services</a></li>
-    <li style="margin: 10px 0;"><a href="portfolio.html" style="text-decoration: none; color: inherit;">🛠️ Portfolio or Case Studies</a></li>
-    <li style="margin: 10px 0;"><a href="blog.html" style="text-decoration: none; color: inherit;">📰 Blog or Insights</a></li>
-    <li style="margin: 10px 0;"><a href="contact.html" style="text-decoration: none; color: inherit;">📬 Contact Us</a></li>
-  </ul>
-</section>
-
+  <footer>
+    &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
+  </footer>
 </body>
 </html>
