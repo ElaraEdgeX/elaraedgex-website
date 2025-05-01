@@ -64,12 +64,13 @@
     .thank-you-message {
       text-align: center;
       color: #0F4C44;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-top: 20px;
       display: none;
-      background-color: #e6fff2;
-      padding: 15px;
+      background-color: #dcf3e6;
+      padding: 30px 20px;
       border-radius: 15px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
     }
   </style>
 </head>
@@ -94,19 +95,21 @@
     <section class="contact-form">
       <h2>Get in Touch</h2>
       <form id="contactForm">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
+        <div id="formFields">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
 
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject">
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit" id="submitBtn">Send Message</button>
+          <button type="submit" id="submitBtn">Send Message</button>
+        </div>
       </form>
       <div class="thank-you-message" id="thankYouMessage">
         ✅ Thank you for your message! We'll be in touch within 2 working days.
@@ -120,12 +123,11 @@
 
   <script>
     const form = document.getElementById('contactForm');
+    const formFields = document.getElementById('formFields');
     const thankYou = document.getElementById('thankYouMessage');
-    const submitBtn = document.getElementById('submitBtn');
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-
       const formData = new FormData(form);
 
       fetch('https://formspree.io/f/xqaqpkdn', {
@@ -135,14 +137,16 @@
       }).then(response => {
         if (response.ok) {
           form.reset();
+          formFields.style.display = 'none';
           thankYou.style.display = 'block';
-          submitBtn.disabled = true;
         } else {
           thankYou.innerText = '⚠️ Something went wrong. Please try again later.';
+          formFields.style.display = 'none';
           thankYou.style.display = 'block';
         }
       }).catch(() => {
         thankYou.innerText = '⚠️ Submission failed. Check your connection.';
+        formFields.style.display = 'none';
         thankYou.style.display = 'block';
       });
     });
