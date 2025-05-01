@@ -31,28 +31,42 @@
       min-width: 250px;
       background: #ffffff;
       border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       text-align: center;
       position: relative;
-      transition: transform 0.3s ease, background 0.3s ease;
+      transition: all 0.4s ease;
       cursor: pointer;
+    }
+    .concept-tile::after {
+      content: '\1F516'; /* bookmark emoji */
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.2rem;
+      opacity: 0.3;
     }
     .concept-tile:hover {
       background: #F5E8D1;
-      transform: translateY(-5px);
+      transform: scale(1.03);
+    }
+    .concept-tile h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
     }
     .concept-description {
       opacity: 0;
       max-height: 0;
       overflow: hidden;
-      transition: opacity 0.3s ease, max-height 0.3s ease;
-      font-size: 0.95rem;
-      margin-top: 10px;
+      transition: all 0.5s ease;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #333;
     }
     .concept-tile:hover .concept-description {
       opacity: 1;
-      max-height: 100px;
+      max-height: 200px;
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -92,15 +106,15 @@
 
   <div class="concept-tiles">
     <div class="concept-tile">
-      <h3 style="color: #0F4C44;">🌕 Elara</h3>
+      <h3 style="color: #0F4C44;">🌌 Elara</h3>
       <p class="concept-description">Named after one of Jupiter’s moons, Elara represents our curiosity and vision for exploring bold digital horizons.</p>
     </div>
     <div class="concept-tile">
-      <h3 style="color: #0F4C44;">🧠 Edge</h3>
+      <h3 style="color: #0F4C44;">🌐 Edge</h3>
       <p class="concept-description">Symbolises decentralised thinking and agile-edge solutions that empower innovation closer to the source.</p>
     </div>
     <div class="concept-tile">
-      <h3 style="color: #C88B2B;">✨ X</h3>
+      <h3 style="color: #C88B2B;">💡 X</h3>
       <p class="concept-description">Represents our pursuit of Xcellence — the mindset of continual growth, quality, and impact in everything we do.</p>
     </div>
   </div>
