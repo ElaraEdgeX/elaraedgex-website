@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <style>
+    body {
+      background-color: #F5E8D1;
+    }
     .watermark {
       position: fixed;
       width: 500px;
@@ -24,7 +27,7 @@
       flex-wrap: wrap;
       gap: 40px;
       justify-content: center;
-      align-items: flex-start;
+      align-items: stretch;
       margin: 60px auto;
       max-width: 1200px;
       padding: 0 20px;
@@ -33,27 +36,40 @@
     .booking-wrapper {
       flex: 1;
       min-width: 300px;
-      background: #ffffff;
+      background: #fefcf7;
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 760px;
     }
     .contact-form h2,
     .booking-wrapper h2 {
       font-family: 'Poppins', sans-serif;
       font-size: 2rem;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #0F4C44;
+      text-align: center;
+    }
+    .contact-form p.intro,
+    .booking-wrapper p.intro {
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 30px;
     }
     .calendly-inline-widget {
-      min-width: 100%;
-      height: 600px;
+      width: 100%;
+      height: 620px;
+      border-radius: 10px;
     }
     form label {
       display: block;
       margin-top: 15px;
       font-weight: 600;
+      font-family: 'Poppins', sans-serif;
     }
     form input,
     form textarea {
@@ -79,12 +95,63 @@
     form button:hover {
       background: #C88B2B;
     }
+    .thank-you {
+      display: none;
+      background-color: #FFF7EB;
+      color: #0F4C44;
+      font-weight: 600;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .thank-you .emoji {
+      font-size: 2.2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
     @media (max-width: 768px) {
       .contact-container {
         flex-direction: column;
       }
+      .contact-form,
+      .booking-wrapper {
+        height: auto;
+      }
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      const thankYouMsg = document.querySelector(".thank-you");
+      const introMsg = document.querySelector(".contact-form .intro");
+
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+
+          fetch("https://formspree.io/f/xqaqpkdn", {
+            method: "POST",
+            headers: {
+              'Accept': 'application/json'
+            },
+            body: formData
+          })
+          .then(response => {
+            if (response.ok) {
+              form.reset();
+              form.style.display = "none";
+              introMsg.style.display = "none";
+              thankYouMsg.style.display = "block";
+            }
+          })
+          .catch(error => console.error('Error!', error.message));
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <img src="EEXlogo.png" class="watermark" alt="Logo watermark" />
@@ -104,10 +171,14 @@
   </header>
 
   <main>
+    <h1 style="text-align:center; color:#0F4C44; margin-top: 40px; font-size: 2rem;">We'd love to connect with you</h1>
+    <p style="text-align:center; max-width:700px; margin: 0 auto 40px; font-size:1.1rem; color:#333;">Use the form below to send us a message or schedule a 30-minute discovery call at your convenience. We're here to collaborate, support, and explore how we can help you achieve your goals.</p>
+
     <div class="contact-container">
       <div class="contact-form">
         <h2>✉️ Send Us a Message</h2>
-        <form action="https://formspree.io/f/xqaqpkdn" method="POST">
+        <p class="intro">Fill out the form below and we'll get back to you shortly.</p>
+        <form>
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" required />
 
@@ -122,12 +193,20 @@
 
           <button type="submit">Send Message</button>
         </form>
+        <div class="thank-you">
+          <span class="emoji">🎉</span>
+          Thank you for your message! We'll be in touch within 2 working days.<br><br>
+          <a href="contact.html" style="display:inline-block;margin-top:10px;color:#fff;background:#0F4C44;padding:10px 20px;border-radius:20px;text-decoration:none;font-weight:bold;">← Back to Contact</a>
+        </div>
       </div>
 
       <div class="booking-wrapper">
         <h2>📅 Book a Discovery Call</h2>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/elaraedgex/30min?background_color=f5e8d1&text_color=0f4c44&primary_color=c88b2b"></div>
+        <p class="intro">Select a time that suits you and we'll send you a confirmation with call details.</p>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/elaraedgex/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=f5e8d1&text_color=0f4c44&primary_color=c88b2b" style="min-width:320px;height:620px;background-color:#fefcf7;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
       </div>
     </div>
   </main>
