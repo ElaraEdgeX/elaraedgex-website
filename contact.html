@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | ElaraEdgeX</title>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     .watermark {
       position: fixed;
-      width: 400px;
+      width: 500px;
       height: auto;
       opacity: 0.035;
       z-index: -1;
@@ -19,13 +19,26 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    .contact-form {
-      max-width: 800px;
+    .contact-form,
+    .booking-wrapper {
+      max-width: 1000px;
       margin: 60px auto;
-      background: #fef9f2;
-      padding: 40px 30px;
+      background: #ffffff;
+      padding: 40px;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .contact-form h2,
+    .booking-wrapper h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #0F4C44;
+    }
+    .calendly-inline-widget {
+      min-width: 320px;
+      height: 700px;
     }
     form label {
       display: block;
@@ -53,56 +66,17 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-    form button:hover:enabled {
+    form button:hover {
       background: #C88B2B;
-    }
-    .thank-you-message {
-      text-align: center;
-      color: #0F4C44;
-      font-size: 1.3rem;
-      margin-top: 20px;
-      display: none;
-      background-color: #F5E8D1;
-      padding: 40px 30px;
-      border-radius: 20px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-      animation: fadeInScale 0.8s ease forwards;
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    .thank-you-message h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-    .back-home-link {
-      display: inline-block;
-      margin-top: 25px;
-      text-decoration: none;
-      color: #0F4C44;
-      font-weight: bold;
-      border: 2px solid #0F4C44;
-      padding: 10px 20px;
-      border-radius: 30px;
-      transition: background 0.3s;
-    }
-    .back-home-link:hover {
-      background: #0F4C44;
-      color: #fff;
-    }
-    @keyframes fadeInScale {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
     }
   </style>
 </head>
 <body>
-  <img src="EEXlogo.png" class="watermark" alt="Logo watermark">
+  <img src="EEXlogo.png" class="watermark" alt="Logo watermark" />
 
   <header>
     <a href="index.html">
-      <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
+      <img src="EEXlogo.png" alt="ElaraEdgeX Logo" />
     </a>
     <nav>
       <a href="index.html">Home</a>
@@ -115,66 +89,36 @@
   </header>
 
   <main>
-    <section class="contact-form">
-      <form id="contactForm">
-        <div id="formFields">
-          <h2>Get in Touch</h2>
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
+    <div class="contact-form">
+      <h2>✉️ Send Us a Message</h2>
+      <form action="https://formspree.io/f/xqaqpkdn" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
 
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
 
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" />
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-          <button type="submit" id="submitBtn">Send Message</button>
-        </div>
+        <button type="submit">Send Message</button>
       </form>
-      <div class="thank-you-message" id="thankYouMessage">
-        <h2>🎉 Thank you!</h2>
-        <p>We’ve received your message and will be in touch within 2 working days.</p>
-        <a href="index.html" class="back-home-link">← Back to Home</a>
-      </div>
-    </section>
+    </div>
+
+    <div class="booking-wrapper">
+      <h2>📅 Book a Discovery Call</h2>
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/elaraedgex/30min?background_color=f5e8d1&text_color=0f4c44&primary_color=c88b2b"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+    </div>
   </main>
 
   <footer>
     &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
   </footer>
-
-  <script>
-    const form = document.getElementById('contactForm');
-    const formFields = document.getElementById('formFields');
-    const thankYou = document.getElementById('thankYouMessage');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-
-      fetch('https://formspree.io/f/xqaqpkdn', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          formFields.style.display = 'none';
-          thankYou.style.display = 'block';
-        } else {
-          thankYou.innerHTML = '<h2>⚠️ Oops!</h2><p>Something went wrong. Please try again later.</p>';
-          formFields.style.display = 'none';
-          thankYou.style.display = 'block';
-        }
-      }).catch(() => {
-        thankYou.innerHTML = '<h2>⚠️ Error</h2><p>Submission failed. Check your connection.</p>';
-        formFields.style.display = 'none';
-        thankYou.style.display = 'block';
-      });
-    });
-  </script>
 </body>
 </html>
