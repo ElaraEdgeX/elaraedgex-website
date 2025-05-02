@@ -7,36 +7,135 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    .watermark {
+      position: fixed;
+      width: 500px;
+      height: auto;
+      opacity: 0.035;
+      z-index: -1;
+      pointer-events: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .portfolio-content {
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 60px;
+      background: #fdf6ea;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+    .portfolio-content h1 {
+      color: #C88B2B;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    .portfolio-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #0F4C44;
+      margin: 0 auto 20px;
+      max-width: 700px;
+    }
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      flex: 1 1 280px;
+      max-width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      color: #C88B2B;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #0F4C44;
+    }
+    .back-home {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #0F4C44;
+      font-weight: bold;
+      border: 2px solid #0F4C44;
+      padding: 12px 24px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    .back-home:hover {
+      background: #0F4C44;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
+  <img src="EEXlogo.png" class="watermark" alt="Logo watermark">
 
-<header>
-  <a href="index.html">
-    <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
-  </a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html" class="active">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <a href="index.html">
+      <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<main>
-  <div class="coming-soon">
-    🚧 This page is under construction. Stay tuned for exciting updates!
-  </div>
-  <h1>Our Portfolio</h1>
-  <p>Explore the diverse projects and innovative solutions crafted by the ElaraEdgeX team, driving success across industries and businesses.</p>
-  <a href="index.html" class="back-home">← Back to Home</a>
-</main>
+  <main>
+    <section class="portfolio-content">
+      <h1>Our Portfolio</h1>
+      <p>At ElaraEdgeX, we are at the early stages of our journey and are gradually building a collection of meaningful work. Our focus is on delivering reliable, clean, and user-friendly solutions that meet real needs.</p>
 
-<footer>
-  &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
-</footer>
+      <p>We have started offering services in:</p>
+      <div class="service-cards">
+        <div class="card">
+          <h3>🌐 Website Development</h3>
+          <p>Creating modern, responsive websites tailored to small business needs.</p>
+        </div>
+        <div class="card">
+          <h3>🧪 Testing & Automation</h3>
+          <p>Helping teams improve quality through reliable automation strategies.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Mentoring & Coaching</h3>
+          <p>Supporting individual and team growth through guidance and knowledge sharing.</p>
+        </div>
+      </div>
 
+      <p style="margin-top: 40px;">We believe in doing quality work and building long-term relationships with our clients. This space will soon feature some of our case studies and example projects.</p>
+
+      <p><em>If you'd like to work with us or see samples of what we can do, feel free to <a href="contact.html" style="color:#C88B2B; font-weight:600;">get in touch</a>.</em></p>
+
+      <a href="index.html" class="back-home">← Back to Home</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
+  </footer>
 </body>
 </html>
