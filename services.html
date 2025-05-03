@@ -7,36 +7,200 @@
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    .services-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 10px;
+    }
+    .services-container h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .services-container p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .service-section {
+      margin-bottom: 40px;
+    }
+    .service-block {
+      background-color: var(--bg-lighter);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .service-block h2,
+    .service-block .service-text-intro {
+      text-align: center;
+    }
+    .service-content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .service-content-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .service-content-row.reverse {
+      flex-direction: row-reverse;
+    }
+    .service-image {
+      flex: 1;
+      min-width: 250px;
+      max-width: 40%;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .service-list {
+      flex: 1;
+      min-width: 250px;
+    }
+    .offer-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .offer-item {
+      background-color: #ffffff;
+      border-left: 5px solid #C88B2B;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      color: #0F4C44;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    }
+    .closing-note {
+      text-align: center;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .service-content-row,
+      .service-content-row.reverse {
+        flex-direction: column;
+      }
+      .service-image,
+      .service-list {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <a href="index.html">
+      <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <a href="index.html">
-    <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
-  </a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html" class="active">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <main class="services-container">
+    <h1 style="color: #C88B2B; text-align: center;">Services – ElaraEdgeX</h1>
+    <hr>
 
-<main>
-  <div class="coming-soon">
-    🚧 This page is under construction. Stay tuned for exciting updates!
-  </div>
-  <h1>Our Services</h1>
-  <p>We are crafting innovative services tailored for your success.</p>
-  <a href="index.html" class="back-home">← Back to Home</a>
-</main>
+    <section style="margin-top: 30px; text-align: center;">
+      <h2 style="color: #0F4C44;">What We Do</h2>
+      <p>At ElaraEdgeX, we offer practical, people-first technology services designed to help you move forward—whether that means launching a new website, improving your software quality, or supporting your team’s growth. We bring clarity, care, and know-how to every project.</p>
+    </section>
 
-<footer>
-  &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
-</footer>
+    <hr>
 
+    <section class="service-section" id="Web-Development">
+      <div class="service-block">
+        <div class="service-content-wrapper">
+          <h2 style="color: #0F4C44;">🌐 Web Development</h2>
+          <p class="service-text-intro"><strong>Clean, modern websites that just work.</strong></p>
+          <div class="service-content-row">
+            <img src="images/web-dev.png" alt="Web Development" class="service-image">
+            <div class="service-list">
+              <p>Need a website that looks great and works beautifully? We design and build responsive, user-friendly sites that reflect your brand and support your goals—whether that’s to inform, convert, or simply stand out online.</p>
+              <p><strong>What we offer:</strong></p>
+              <div class="offer-list">
+                <div class="offer-item">Custom or WordPress-based websites</div>
+                <div class="offer-item">Mobile-first responsive design</div>
+                <div class="offer-item">Website refresh or redesign</div>
+                <div class="offer-item">Landing pages for marketing campaigns</div>
+                <div class="offer-item">SEO-friendly setup and performance tuning</div>
+              </div>
+            </div>
+          </div>
+          <p class="closing-note">Whether you're a small business, freelancer, or nonprofit—we’ll help you get online with confidence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-section" id="software-testing">
+      <div class="service-block">
+        <div class="service-content-wrapper">
+          <h2 style="color: #0F4C44;">✅ Software Testing & QA</h2>
+          <p class="service-text-intro"><strong>Better quality. Fewer bugs. Happier users.</strong></p>
+          <div class="service-content-row reverse">
+            <img src="images/qa.jpg" alt="Software Testing & QA" class="service-image">
+            <div class="service-list">
+              <p>We support teams in delivering reliable, high-quality software through modern testing practices and smart automation. Our approach helps you reduce risk, move faster, and build trust with your users.</p>
+              <p><strong>What we offer:</strong></p>
+              <div class="offer-list">
+                <div class="offer-item">Test strategy & quality process reviews</div>
+                <div class="offer-item">Manual and exploratory testing</div>
+                <div class="offer-item">Test automation setup and guidance</div>
+                <div class="offer-item">Continuous testing in CI pipelines</div>
+                <div class="offer-item">Quality coaching and team enablement</div>
+              </div>
+            </div>
+          </div>
+          <p class="closing-note">Whether you're scaling fast or just getting started, we help you bake quality into every release.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-section" id="coaching">
+      <div class="service-block">
+        <div class="service-content-wrapper">
+          <h2 style="color: #0F4C44;">🧠 Coaching & Mentoring</h2>
+          <p class="service-text-intro"><strong>Support that grows with you.</strong></p>
+          <div class="service-content-row">
+            <img src="images/coaching.jpg" alt="Coaching & Mentoring" class="service-image">
+            <div class="service-list">
+              <p>Behind every great delivery is a strong team—and strong individuals. We offer coaching and mentoring to help people build clarity, confidence, and capability. Whether you’re navigating change, developing leadership skills, or looking for support in your role, we create space for growth and reflection.</p>
+              <p><strong>What we offer:</strong></p>
+              <div class="offer-list">
+                <div class="offer-item">One-to-one mentoring for tech and digital professionals</div>
+                <div class="offer-item">Coaching for leadership, confidence, and decision-making</div>
+                <div class="offer-item">Team sessions to boost collaboration, communication, and mindset</div>
+                <div class="offer-item">Support for those going through change, challenges, and growth</div>
+                <div class="offer-item">Reflective space for personal and professional development</div>
+              </div>
+            </div>
+          </div>
+          <p class="closing-note">Our coaching is grounded, flexible, and tailored to your needs—no rigid frameworks or tick boxes. Just thoughtful support, when and how you need it.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section style="text-align: center;">
+      <h2 style="color: #C88B2B;">👇 Let’s Talk</h2>
+      <p>Not sure where to begin or need something specific? We’re happy to chat.</p>
+      <a href="contact.html" class="cta-button">📬 Get in Touch</a>
+      <span style="display: inline-block; margin-left: 20px;"><a href="contact.html" class="cta-button" >📅 Book a Call</a></span>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
+  </footer>
 </body>
 </html>

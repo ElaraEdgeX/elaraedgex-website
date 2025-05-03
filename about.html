@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | ElaraEdgeX</title>
-  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     .watermark {
       position: fixed;
@@ -19,6 +19,55 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+
+    .values-methods {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 40px 0;
+    }
+
+    .value-box {
+      flex: 1;
+      min-width: 300px;
+      background: var(--bg-lighter);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      position: relative;
+    }
+
+    .value-box h3 {
+      color: var(--secondary-color);
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+
+    .value-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .value-box li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .value-box li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #ffffff33;
+      color: var(--primary-color);
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
     .concept-tiles {
       display: flex;
       flex-wrap: wrap;
@@ -26,19 +75,25 @@
       gap: 30px;
       margin-top: 30px;
     }
+
     .concept-tile {
       flex: 1;
       min-width: 250px;
-      background: #ffffff;
+      background: #fdf3e1;
       border-radius: 20px;
       padding: 30px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
       text-align: center;
       position: relative;
       transition: all 0.4s ease;
       cursor: pointer;
-      font-family: 'Poppins', sans-serif;
     }
+
+    .concept-tile:hover {
+      background: var(--bg-light);
+      transform: scale(1.03);
+    }
+
     .concept-tile::after {
       content: '\1F516';
       position: absolute;
@@ -47,10 +102,7 @@
       font-size: 1.2rem;
       opacity: 0.3;
     }
-    .concept-tile:hover {
-      background: #F5E8D1;
-      transform: scale(1.03);
-    }
+
     .concept-tile h3 {
       font-size: 1.8rem;
       margin-bottom: 10px;
@@ -59,19 +111,24 @@
       align-items: center;
       gap: 8px;
     }
-    .concept-tile h3 .logo-letter {
-      font-family: 'Audiowide', sans-serif;
+
+    .concept-tile .logo-letter {
+      font-family: var(--font-logo);
       font-size: 2.2rem;
     }
-    .concept-tile h3 .elara-letter {
-      color: #C88B2B; /* orange from logo */
+
+    .elara-letter {
+      color: var(--secondary-color);
     }
-    .concept-tile h3 .edge-letter {
-      color: #C88B2B; /* orange from logo */
+
+    .edge-letter {
+      color: var(--secondary-color);
     }
-    .concept-tile h3 .x-letter {
-      color: #C88B2B; /* orange from logo */
+
+    .x-letter {
+      color: var(--secondary-color);
     }
+
     .concept-description {
       opacity: 0;
       max-height: 0;
@@ -81,6 +138,7 @@
       line-height: 1.5;
       color: #333;
     }
+
     .concept-tile:hover .concept-description {
       opacity: 1;
       max-height: 200px;
@@ -88,63 +146,82 @@
     }
   </style>
 </head>
-
 <body>
-  <img src="EEXlogo.png" class="watermark" alt="Logo watermark">
+  <img src="EEXlogo.png" class="watermark" alt="Logo watermark" />
 
-<header>
-  <a href="index.html">
-    <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
-  </a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <a href="index.html">
+      <img src="EEXlogo.png" alt="ElaraEdgeX Logo" />
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<main>
-  <h1>About ElaraEdgeX</h1>
+  <main>
+    <h1>About ElaraEdgeX</h1>
 
-  <p>ElaraEdgeX is a forward-thinking technology consultancy dedicated to driving digital transformation through innovation, collaboration, and excellence. We specialise in delivering smart, scalable, and human-centred tech solutions that empower businesses to evolve with confidence.</p>
+    <p><strong><span style="color: var(--primary-color);">ElaraEdge</span><span style="color: var(--secondary-color);">X</span></strong> is a modern technology consultancy built on a simple belief: digital solutions should be clear, effective, and human-centred. We work with businesses and teams to deliver practical results—whether that’s through a clean, modern website, improved software quality, or thoughtful coaching and mentoring.</p>
+    <p>We bring together technical expertise and a people-first mindset. With experience across both public and private sectors, we understand the challenges that come with delivering real change—and how to make progress feel possible.</p>
+    <p>Whether you're building new platforms, modernising systems, or strengthening team capability, we help you move forward with clarity and confidence. We combine practical delivery with a collaborative approach — ensuring your solutions are not only effective, but also sustainable and aligned with your long-term goals.</p>
+    <p><strong><span style="color: var(--primary-color);">ElaraEdge</span><span style="color: var(--secondary-color);">X</span></strong>: Innovation at the Edge of Xcellence.</p>
 
-  <p>We bring a versatile blend of technology expertise and people-focused delivery. Our services span across software testing, web development, automation, and DevOps, alongside leadership, mentoring, and coaching support for digital teams.</p>
+    <hr />
 
-  <p>Whether you're building new platforms, modernising systems, or strengthening team capability, we help you move forward with clarity and confidence. We combine practical delivery with a collaborative approach — ensuring your solutions are not only effective, but also sustainable and aligned with your long-term goals.</p>
-
-  <p><strong>ElaraEdgeX: Innovation at the Edge of Xcellence.</strong></p>
-
-  <hr style="margin: 40px 0; border: none; border-top: 1px solid #ccc;">
-
-  <h2 style="color: #C88B2B;">What does “ElaraEdgeX” mean?</h2>
-  <p>The name <strong>ElaraEdgeX</strong> reflects our identity and approach:</p>
-
-  <div class="concept-tiles">
-    <div class="concept-tile">
-      <h3><span class="logo-letter elara-letter">E</span>Elara</h3>
-      <p class="concept-description">Named after one of Jupiter’s moons, Elara represents our curiosity and vision for exploring bold digital horizons.</p>
+    <div class="values-methods">
+      <div class="value-box">
+        <h3>What We Value</h3>
+        <p>We’re not here to throw jargon at you or overcomplicate things. Our work is guided by three core principles:</p>
+        <ul>
+          <li><strong>Clarity</strong> – We keep things simple, focused, and transparent.</li>
+          <li><strong>Care</strong> – We treat your challenges as our own and always aim to add genuine value.</li>
+          <li><strong>Confidence</strong> – We help you build the confidence to deliver, grow, and lead in a fast-moving digital world.</li>
+        </ul>
+        <p>We work best with clients who care about quality, growth, and doing things the right way.</p>
+      </div>
+      <div class="value-box">
+        <h3>How We Work</h3>
+        <p>We believe great results come from good conversations and real collaboration. That means:</p>
+        <ul>
+          <li>Listening first</li>
+          <li>Co-creating solutions that fit your context</li>
+          <li>Working with honesty, energy, and adaptability</li>
+          <li>Making sure you’re confident to move forward—even after we’ve stepped away</li>
+        </ul>
+        <p>We're small by design, which means you're always working with someone who understands your goals and brings experience to the table.</p>
+      </div>
     </div>
-    <div class="concept-tile">
-      <h3><span class="logo-letter edge-letter">e</span>Edge</h3>
-      <p class="concept-description">Symbolises decentralised thinking and agile-edge solutions that empower innovation closer to the source.</p>
+
+    <hr />
+
+    <h2 style="color: var(--secondary-color);">What does “<strong><span style="color: var(--primary-color);">ElaraEdge</span><span style="color: var(--secondary-color);">X</span></strong>” mean?</h2>
+    <p>The name <strong><span style="color: var(--primary-color);">ElaraEdge</span><span style="color: var(--secondary-color);">X</span></strong> reflects our identity and approach:</p>
+
+    <div class="concept-tiles">
+      <div class="concept-tile">
+        <h3><span class="logo-letter elara-letter">E</span>Elara</h3>
+        <p class="concept-description">One of Jupiter’s moons, Elara represents our curiosity and vision for exploring bold digital horizons.</p>
+      </div>
+      <div class="concept-tile">
+        <h3><span class="logo-letter edge-letter">e</span>Edge</h3>
+        <p class="concept-description">A nod to agile, adaptable ways of working — closer to where the real action happens..</p>
+      </div>
+      <div class="concept-tile">
+        <h3><span class="logo-letter x-letter">X</span>cellence</h3>
+        <p class="concept-description">Represents our pursuit of Xcellence — the mindset of continual growth, quality, and impact in everything we do.</p>
+      </div>
     </div>
-    <div class="concept-tile">
-      <h3><span class="logo-letter x-letter">X</span>cellence</h3>
-      <p class="concept-description">Represents our pursuit of Xcellence — the mindset of continual growth, quality, and impact in everything we do.</p>
-    </div>
-  </div>
 
-  <p style="margin-top: 40px;">Together, ElaraEdgeX reflects our identity: bold, future-facing, and committed to making innovation work for real-world impact.</p>
+    <p style="margin-top: 20px;">Together, <strong><span style="color: var(--primary-color);">ElaraEdge</span><span style="color: var(--secondary-color);">X</span></strong> reflects our identity: bold, future-facing, and committed to making innovation work for real-world impact.</p>
 
-  <a href="index.html" class="back-home">&larr; Back to Home</a>
-</main>
+    <a href="index.html" class="back-home">&larr; Back to Home</a>
+  </main>
 
-<footer>
-  &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
-</footer>
-
+  <footer>
+    &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
+  </footer>
 </body>
 </html>

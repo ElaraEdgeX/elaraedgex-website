@@ -19,11 +19,36 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+    .hero {
+      padding: 5px 5px 25px;
+    }
+    .hero h1 {
+      margin-bottom: 10px;
+    }
+    .hero p {
+      margin-top: 0;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #C88B2B;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #0F4C44;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
   <img src="EEXlogo.png" class="watermark" alt="Logo watermark">
-
   <header>
     <a href="index.html">
       <img src="EEXlogo.png" alt="ElaraEdgeX Logo">
@@ -32,8 +57,6 @@
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -44,32 +67,58 @@
     <a href="contact.html" class="cta-button">Let’s Talk</a>
   </section>
 
-  <section class="intro-summary" style="max-width: 1000px; margin: 60px auto; text-align: center; font-size: 1.2rem; line-height: 1.8;">
-    <p><strong>ElaraEdgeX</strong> is a modern technology consultancy helping businesses build smarter, scale faster, and lead confidently in the digital era. From automation to leadership development, we partner with you to deliver outcomes that matter.</p>
+  <section style="max-width: 1000px; margin: 40px auto 20px auto; padding: 0 20px; text-align: center;">
+    <p style="font-size: 1.2rem; line-height: 1.8;">Helping businesses work smarter, move faster, and grow stronger.</p>
+    <p style="font-size: 1.2rem; line-height: 1.8;"><strong><span style="color: #0F4C44;">ElaraEdge</span><span style="color: #C88B2B;">X</span></strong> is a modern tech consultancy focused on practical, people-first solutions. Whether it’s building a sleek website, improving software quality, or supporting your team’s growth—we’re here to make digital work for you.</p>
   </section>
 
-  <section class="home-services-preview" style="max-width: 900px; margin: 40px auto; padding: 20px;">
-    <h2 style="text-align: center; color: #0F4C44;">Our Capabilities</h2>
-    <ul style="display: flex; justify-content: space-between; list-style: none; padding: 0; margin-top: 30px; gap: 30px;">
-      <li style="flex: 1; text-align: center;"><strong>✅ Software Testing & QA</strong></li>
-      <li style="flex: 1; text-align: center;"><strong>🌐 Web Development</strong></li>
-      <li style="flex: 1; text-align: center;"><strong>🧠 Coaching & Mentoring</strong></li>
+  <<section class="home-services-preview" style="max-width: 1100px; margin: 40px auto; padding: 40px 20px; background-color: #f5e8d1; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    <h2 style="text-align: center; color: #0F4C44; margin-bottom: 30px;">Smart tech. Real results.</h2>
+    <ul style="display: flex; flex-wrap: wrap; justify-content: center; list-style: none; padding: 0; margin: 0; gap: 30px;">
+      <li style="flex: 1; min-width: 280px; max-width: 300px; background: #fdf3e1; padding: 24px 20px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center;">
+        <a href="services.html#web-development" style="text-decoration: none; color: inherit;">
+          <strong style="font-size: 1.2rem;">🌐 Web Development</strong>
+        </a>
+        <p style="margin-top: 10px; font-size: 1rem;">Create clean, responsive websites that look great and perform even better.</p>
+      </li>
+      <li style="flex: 1; min-width: 280px; max-width: 300px; background: #fdf3e1; padding: 24px 20px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center;">
+        <a href="services.html#software-testing" style="text-decoration: none; color: inherit;">
+          <strong style="font-size: 1.2rem;">✅ Software Testing & QA</strong>
+        </a>
+        <p style="margin-top: 10px; font-size: 1rem;">Make sure your software works—fast, reliable, and ready to scale.</p>
+      </li>
+      <li style="flex: 1; min-width: 280px; max-width: 300px; background: #fdf3e1; padding: 24px 20px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center;">
+        <a href="services.html#coaching" style="text-decoration: none; color: inherit;">
+          <strong style="font-size: 1.2rem;">🧠 Coaching & Mentoring</strong>
+        </a>
+        <p style="margin-top: 10px; font-size: 1rem;">Support your team’s growth with honest, practical guidance.</p>
+      </li>
     </ul>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="services.html" class="cta-button">Explore Our Services</a>
+    </div>
+  </section>
+  
+  
+
+  <section style="max-width: 1000px; margin: 10px auto 10px auto; padding: 0 20px; text-align: center;">
+    <h2 style="color: #0F4C44; margin-bottom: 20px;">Who We Are</h2>
+    <p style="font-size: 1.1rem; line-height: 1.8;">We mix hands-on expertise with a collaborative style that puts your needs first. From planning to delivery, we focus on doing the work that matters—clearly, simply, and with lasting value.</p>
+    <p style="font-size: 1.1rem; line-height: 1.8;">With years of experience delivering digital solutions across both public and private sectors, <strong><span style="color: #0F4C44;">ElaraEdge</span><span style="color: #C88B2B;">X</span></strong> is built on a foundation of hands-on expertise and a genuine commitment to quality, clarity, and growth. We've seen what works, what doesn’t, and what truly helps businesses and teams move forward with confidence.</p>
+    <div style="margin-top: 10px;">
+      <a href="about.html" class="cta-button">More About Us</a>
+    </div>
+  </section>
+
+  <section style="background: #F5E8D1; text-align: center; padding: 30px 10px; margin-top: 05px;">
+    <h2 style="color: #0F4C44;">Let’s Work Together</h2>
+    <p style="font-size: 1.1rem; max-width: 700px; margin: 10px auto;">Whether you have a project in mind or just want to chat, we’d love to hear from you.</p>
+    <a href="contact.html" class="cta-button">📬 Get in Touch</a>
+    <span style="display: inline-block; margin-left: 20px;"><a href="contact.html" class="cta-button">📅 Book a Call</a></span>
   </section>
 
   <footer>
     &copy; 2025 ElaraEdgeX Ltd. All rights reserved.
   </footer>
-
-  <section style="max-width: 900px; margin: 40px auto; padding: 20px; text-align: center; font-family: 'Poppins', sans-serif;">
-    <h2 style="color: #48576e;">Coming Soon...</h2>
-    <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
-      <li style="margin: 10px 0;"><a href="about.html" style="text-decoration: none; color: inherit;">🧠 About Us</a></li>
-      <li style="margin: 10px 0;"><a href="services.html" style="text-decoration: none; color: inherit;">💼 Services</a></li>
-      <li style="margin: 10px 0;"><a href="portfolio.html" style="text-decoration: none; color: inherit;">🛠️ Portfolio or Case Studies</a></li>
-      <li style="margin: 10px 0;"><a href="blog.html" style="text-decoration: none; color: inherit;">📰 Blog or Insights</a></li>
-      <li style="margin: 10px 0;"><a href="contact.html" style="text-decoration: none; color: inherit;">📬 Contact Us</a></li>
-    </ul>
-  </section>
 </body>
 </html>
